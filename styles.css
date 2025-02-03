@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth resizing effect */
+}
+
+.image-container img:hover {
+    transform: scale(2.8) !important; /* Ensure hover scaling always applies */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 20px 40px; /* Increased padding for larger buttons */
+    font-size: 32px; /* Larger font size for proportionate scaling */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#ca-button:hover::after {
+    content: "73297fdsfsdhjf3232323";
+    display: block;
+    color: black;
+    background: #f1f1f1;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#ca-button:hover {
+    position: relative;
+}
+
+.buttons button:hover {
+    background-color: #ffffff;
+    color: red;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.buttons button:nth-child(2):hover {
+    background-color: #80d4ff;
+    color: red;
+    box-shadow: 0 0 15px rgba(128, 212, 255, 0.8);
+}
+
+.buttons button:nth-child(3):hover {
+    background-color: #5ac8fa;
+    color: red;
+    box-shadow: 0 0 15px rgba(90, 200, 250, 0.8);
+}
