@@ -83,7 +83,7 @@ body {
 
 .image-container {
     position: absolute; /* Allows movement relative to the page */
-    top: 450px; /* Positions it down from the top */
+    top: 400px; /* Positions it down from the top */
     left: 50%; /* Moves it to the middle horizontally */
     transform: translateX(-50%); /* Ensures perfect centering */
     text-align: center;
