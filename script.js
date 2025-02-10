@@ -12,12 +12,20 @@ window.addEventListener('load', () => {
 });
 
 const video = document.getElementById("myVideo");
-video.addEventListener("ended", () => {
-    setTimeout(() => {
-        video.play();
-    }, 3000); // 10-second delay before replaying
+
+// Play video when hovered
+video.addEventListener("mouseenter", () => {
+    video.play();
 });
 
-// Start playing when the page loads
-video.play();
+// Pause video when the mouse leaves
+video.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0; // Reset to the beginning
+});
 
+const questionMark = document.querySelector(".question_mark");
+
+questionMark.addEventListener("mouseenter", () => {
+    questionMark.classList.add("hidden"); // Adds the 'hidden' class to make it disappear
+});

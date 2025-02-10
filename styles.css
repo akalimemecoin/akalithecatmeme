@@ -108,12 +108,33 @@ body {
 /* GIF AKALI */
 
 
-.video-container {
-    width: 100%;
+.video-container, 
+.question_mark {
+    width: 500px; /* Ensures both have the same width */
+    height: 500px; /* Ensures both have the same height */
     position: absolute;
-    top: calc(400px + 200px + 500px); /* Position it below image-container with 500px gap */
+    top: calc(400px + 200px + 500px); /* Keep them aligned */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    display: flex; /* Ensures proper alignment */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents any scaling issues */
 }
 
+/* Ensure the video fully fills the .video-container */
+.video-container video {
+    width: 100%; /* Stretch to fill container */
+    height: 100%; /* Maintain the same height */
+    object-fit: cover; /* Ensures it fills without black bars */
+}
+
+.question_mark {
+    z-index: 20; /* Ensures it's above the video */
+}
+
+.question_mark.hidden {
+    opacity: 0; /* Make it invisible */
+    pointer-events: none; /* Prevent interaction */
+}
