@@ -28,10 +28,31 @@ body {
 }
 
 .akali3 img {
-    height: 75px; /* Adjust size as needed */
-    width: auto;
+    height: 80px; /* Adjust size as needed */
+    width: 100px;
     border-radius: 5px; /* Optional: adds rounded corners */
 }
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Patrick+Hand&family=Gloria+Hallelujah&display=swap');
+.guzik{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-right: 1100px;
+    width: 160px;
+    height: 80px;
+    text-align: center;
+    background-color: #ffcc00;
+    border-radius: 8px; /* Optional: Rounded corners */
+    border: none;
+    cursor: pointer; /* Ensure it looks clickable */
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive; /* Change to any font you prefer */
+}
+
+.guzik:hover {
+    color: lightgreen; /* Change to orange-red */
+}
+
 
 .zdjecie img {
     height: 75px; /* Adjust size as needed */
@@ -41,7 +62,6 @@ body {
 
 .nav-right {
     display: flex;
-    gap: 20px; /* Spaces out links */
 }
 
 .topnav a {
@@ -75,7 +95,7 @@ body {
 }
 
 .topnav a:last-child {
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 
@@ -83,7 +103,7 @@ body {
 
 .image-container {
     position: absolute; /* Allows movement relative to the page */
-    top: 400px; /* Positions it down from the top */
+    top: 420px; /* Positions it down from the top */
     left: 50%; /* Moves it to the middle horizontally */
     transform: translateX(-50%); /* Ensures perfect centering */
     text-align: center;
@@ -113,7 +133,7 @@ body {
     width: 500px; /* Ensures both have the same width */
     height: 500px; /* Ensures both have the same height */
     position: absolute;
-    top: calc(400px + 200px + 500px); /* Keep them aligned */
+    top: calc(400px + 100px + 500px); /* Keep them aligned */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
