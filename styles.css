@@ -111,15 +111,15 @@ body {
 /* FOTA AKALI RESIZABLE */
 
 .image-container {
-    position: absolute; /* Allows movement relative to the page */
+    position: absolute; /* Allows precise positioning */
     top: 420px; /* Positions it down from the top */
-    left: 50%; /* Moves it to the middle horizontally */
-    transform: translateX(-50%); /* Ensures perfect centering */
+    right: 300px; /* Moves it to the right side */
+    transform: translateX(0); /* Removes previous centering */
     text-align: center;
     z-index: 10; /* Keeps it above other elements */
 }
 
-
+/* Ensure image stays responsive */
 .image-container img {
     width: 300px;
     height: 300px;
@@ -128,9 +128,23 @@ body {
     transition: transform 0.3s ease; /* Smooth resizing effect */
 }
 
-
+/* Hover effect */
 .image-container img:hover {
     transform: scale(2.8) !important; /* Ensure hover scaling always applies */
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .image-container {
+        right: 50%; /* Move closer to center */
+        transform: translateX(50%); /* Center it */
+        top: 300px; /* Adjust for better spacing */
+    }
+
+    .image-container img {
+        width: 200px; /* Reduce size for mobile */
+        height: 200px;
+    }
 }
 
 
