@@ -63,6 +63,8 @@ body {
 }
 
 .zdjecie img {
+    justify-content: center; /*watch these 2 lines AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+    display: flex;
     height: 75px; /* Adjust size as needed */
     width: auto;
     border-radius: 5px; /* Optional: adds rounded corners */
@@ -177,4 +179,16 @@ body {
     width: 200px; /* Adjust size */
     height: 100px;
     z-index: 100; /* Make sure it's above other elements */
+}
+
+/* serce on click */
+.heart {
+    position: absolute; /* Change from fixed to absolute */
+    font-size: 40px;
+    color: red;
+    pointer-events: none;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    z-index: 200; /* Make sure it's above other elements */
 }

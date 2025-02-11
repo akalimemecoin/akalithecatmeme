@@ -51,3 +51,35 @@ function showHeart() {
 function hideHeart() {
     document.getElementById("heartGif").style.display = "none"; // Hide the GIF
 }
+
+//serce on click
+window.createFlyingHeart = function(event) { 
+    const imageContainer = event.currentTarget;
+    const heart = document.createElement("span");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+
+    // Get image position
+    const rect = imageContainer.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // Set initial position
+    heart.style.left = centerX + "px";
+    heart.style.top = centerY + "px";
+    heart.style.position = "absolute";
+    heart.style.transform = "translate(-50%, -50%)";
+
+    document.body.appendChild(heart);
+
+    // Animate the heart
+    setTimeout(() => {
+        heart.style.opacity = "0";
+        heart.style.transform = "translate(-50%, -100px) scale(1.5)";
+    }, 50);
+
+    // Remove heart after animation
+    setTimeout(() => {
+        heart.remove();
+    }, 800);
+};
