@@ -9,9 +9,36 @@ body {
     background-size: cover;
     overflow-y: scroll; /* Always show a vertical scrollbar */
     padding-top: 50px; /* Ensures body content doesn't hide under navbar */
+    /* cursor: url('akali5.cur') 16 16, auto; OPCJONALNIE*/
+    cursor: green; 
 }
 
 /* PASEK STAŁY U GÓRY*/
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+.guzik {
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    margin-right: 1100px;
+    width: 160px;
+    height: 80px;
+    text-align: center;
+    background-color: #ffcc00;
+    border-radius: 25px; /* Ensures rounded borders */
+    border: 3px solid black; /* Fixes border (previously incorrect) */
+    cursor: pointer; /* Ensure it looks clickable */
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive; /* Ensures the correct font */
+    outline: none; /* Removes outline on focus */
+}
+
+/* Optional: Change button appearance on hover */
+.guzik:hover {
+    background-color: lightgreen; /* Slightly darker yellow */
+    color: black;
+}
 
 
 .topnav {
@@ -31,28 +58,9 @@ body {
     height: 80px; /* Adjust size as needed */
     width: 100px;
     border-radius: 5px; /* Optional: adds rounded corners */
+    cursor: pointer;
+    cursor: url('heart.cur') 16 16, auto; /* 16x16 is the "hotspot" position for the cursor */
 }
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Patrick+Hand&family=Gloria+Hallelujah&display=swap');
-.guzik{
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    margin-right: 1100px;
-    width: 160px;
-    height: 80px;
-    text-align: center;
-    background-color: #ffcc00;
-    border-radius: 8px; /* Optional: Rounded corners */
-    border: none;
-    cursor: pointer; /* Ensure it looks clickable */
-    font-size: 20px;
-    font-family: 'Gloria Hallelujah', cursive; /* Change to any font you prefer */
-}
-
-.guzik:hover {
-    color: lightgreen; /* Change to orange-red */
-}
-
 
 .zdjecie img {
     height: 75px; /* Adjust size as needed */
@@ -64,7 +72,7 @@ body {
     display: flex;
 }
 
-.topnav a {
+.topnav a{
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
@@ -97,7 +105,6 @@ body {
 .topnav a:last-child {
     margin-right: 20px;
 }
-
 
 /* FOTA AKALI RESIZABLE */
 
@@ -157,4 +164,17 @@ body {
 .question_mark.hidden {
     opacity: 0; /* Make it invisible */
     pointer-events: none; /* Prevent interaction */
+}
+
+
+/* SERDUSZKO */
+
+#heartGif {
+    position: absolute;
+    top: 20px; /* Adjust based on your navbar's height */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: 200px; /* Adjust size */
+    height: 100px;
+    z-index: 100; /* Make sure it's above other elements */
 }

@@ -13,6 +13,8 @@ window.addEventListener('load', () => {
 
 const video = document.getElementById("myVideo");
 
+//video kotka onhover
+
 // Play video when hovered
 video.addEventListener("mouseenter", () => {
     video.play();
@@ -24,8 +26,28 @@ video.addEventListener("mouseleave", () => {
     video.currentTime = 0; // Reset to the beginning
 });
 
+
+//znikający pytajnik
+
 const questionMark = document.querySelector(".question_mark");
 
 questionMark.addEventListener("mouseenter", () => {
     questionMark.classList.add("hidden"); // Adds the 'hidden' class to make it disappear
 });
+
+//powrot na górę strony 
+function scrollToTop(event) {
+    event.preventDefault(); // Prevents the default jump behavior
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+}
+
+//serce
+
+function showHeart() {
+    let heart = document.getElementById("heartGif");
+    heart.style.display = "block"; // Show the GIF
+}
+
+function hideHeart() {
+    document.getElementById("heartGif").style.display = "none"; // Hide the GIF
+}

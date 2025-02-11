@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website in Development</title>
+    <title>Akali the cat</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="akali.ico"> 
 </head>
 <body>
-    <div class="topnav">
-        <a class="akali3" href="#cat">
+    <div class="topnav">      
+        <a class="akali3" href="#cat" onmouseover="showHeart(event)" onmouseout="hideHeart()">
             <img class="akali3" src="akali3.png" alt="Akali Logo">
         </a>
+        <img id="heartGif" src="serce.gif" alt="Heart Animation" style="position: absolute; display: none">
         <button class="guzik" onclick="window.open('https://www.youtube.com')">BUY $AKALI</button>  
         <div class="nav-right">
-            <a class="zdjecie" href="#home">
+            <a class="zdjecie" href="#home" onclick="scrollToTop(event)">
                 <img src="home_pic.webp" alt="Dooooomek">
             </a>
-            <a class="zdjecie" href="#x">
+            <a class="zdjecie" href="https://x.com/home" target="_blank">
                 <img src="x.avif" alt="x">
             </a>
-            <a class="zdjecie" href="#insta">
+            <a class="zdjecie" href="https://www.instagram.com/" target="_blank">
                 <img src="insta.webp" alt="insta"> 
             </a>
-            <a class="zdjecie" href="#discord">
+            <a class="zdjecie" href="https://discord.com" target="_blank">
                 <img src="discord.jpg" alt="discord">
             </a>
-            <a class="zdjecie" href="#telegram">
+            <a class="zdjecie" href="https://web.telegram.org/a/" target="_blank">
                 <img src="telegram.webp" alt="telegram">
             </a>
         </div>
