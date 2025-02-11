@@ -114,7 +114,6 @@ body {
     position: absolute; /* Allows precise positioning */
     top: 420px; /* Positions it down from the top */
     right: 300px; /* Moves it to the right side */
-    transform: translateX(0); /* Removes previous centering */
     text-align: center;
     z-index: 10; /* Keeps it above other elements */
 }
@@ -146,6 +145,7 @@ body {
         height: 200px;
     }
 }
+
 
 
 /* GIF AKALI */
