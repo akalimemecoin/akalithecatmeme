@@ -112,7 +112,6 @@ body {
 .text-container {
     width: 50%; /* Adjust width for responsiveness */
     max-width: 600px; /* Prevents it from being too wide */
-    margin-left: 20px; /* Starts from the left */
     text-align: left; /* Aligns text to the left */
     font-size: 20px;
     line-height: 1.5;
@@ -125,9 +124,15 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .text-container {
-        width: 90%; /* Takes up more space on small screens */
-        margin: 0 auto; /* Centers on small screens */
-        text-align: center; /* Centers text */
+        width: 50%; /* Adjust width for responsiveness */
+        max-width: 600px; /* Prevents it from being too wide */
+        text-align: left; /* Aligns text to the left */
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+        position: absolute;
+        top: 30%; /* Adjust the vertical positioning */
+        left: 25%;
     }
 }
 
@@ -154,19 +159,7 @@ body {
     transform: scale(2.8) !important; /* Ensure hover scaling always applies */
 }
 
-/* 📱 Mobile Responsive */
-@media (max-width: 768px) {
-    .image-container {
-        right: 50%; /* Move closer to center */
-        transform: translateX(50%); /* Center it */
-        top: 300px; /* Adjust for better spacing */
-    }
 
-    .image-container img {
-        width: 200px; /* Reduce size for mobile */
-        height: 200px;
-    }
-}
 
 
 
