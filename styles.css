@@ -34,7 +34,6 @@ body {
     outline: none; /* Removes outline on focus */
 }
 
-/* Optional: Change button appearance on hover */
 .guzik:hover {
     background-color: lightgreen; /* Slightly darker yellow */
     color: black;
@@ -71,6 +70,7 @@ body {
 }
 
 .nav-right {
+    justify-content: center;
     display: flex;
 }
 
@@ -97,7 +97,6 @@ body {
     text-align: center;
 }
 
-/* Ensure the hover effect does not override the static effect */
 .topnav a.home:hover {
     background-color: #ffffff;
     color: rgb(16, 38, 236);
@@ -107,6 +106,31 @@ body {
 .topnav a:last-child {
     margin-right: 20px;
 }
+
+/*opis*/
+
+.text-container {
+    width: 50%; /* Adjust width for responsiveness */
+    max-width: 600px; /* Prevents it from being too wide */
+    margin-left: 20px; /* Starts from the left */
+    text-align: left; /* Aligns text to the left */
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 30%; /* Adjust the vertical positioning */
+    left: 25%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .text-container {
+        width: 90%; /* Takes up more space on small screens */
+        margin: 0 auto; /* Centers on small screens */
+        text-align: center; /* Centers text */
+    }
+}
+
 
 /* FOTA AKALI RESIZABLE */
 
@@ -118,7 +142,6 @@ body {
     z-index: 10; /* Keeps it above other elements */
 }
 
-/* Ensure image stays responsive */
 .image-container img {
     width: 300px;
     height: 300px;
@@ -127,7 +150,6 @@ body {
     transition: transform 0.3s ease; /* Smooth resizing effect */
 }
 
-/* Hover effect */
 .image-container img:hover {
     transform: scale(2.8) !important; /* Ensure hover scaling always applies */
 }
