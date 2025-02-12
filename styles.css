@@ -110,15 +110,62 @@ body {
 /*opis*/
 
 .text-container {
-    width: 50%; /* Adjust width for responsiveness */
-    max-width: 600px; /* Prevents it from being too wide */
-    text-align: left; /* Aligns text to the left */
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
-    position: absolute;
-    top: 30%; /* Adjust the vertical positioning */
-    left: 25%;
+    width: 60%;
+    max-width: 500px;
+    background: rgba(255, 221, 153, 0.9); /* Soft warm cat color */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+
+    position: relative; /* Keeps it within normal document flow */
+    margin-right: 30%;
+}
+
+p {
+    margin: 10px 0;
+    color: #333;
+}
+
+h3 {
+    margin-top: 15px;
+    color: #d26f00; /* Playful orange */
+    font-size: 22px;
+}
+
+/* Contract Address Styling */
+.contract-address {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px dashed #d26f00; /* Dotted separator */
+}
+
+.ca-label {
+    font-size: 28px;
+    font-weight: bold;
+    color: black; /* Eye-catching orange */
+}
+
+.ca-value {
+    font-size: clamp(12px, 4vw, 24px); /* Dynamically adjust size */
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    color: #555; /* Subtle gray */
+    white-space: normal; /* Allow text to wrap inside */
+    overflow-wrap: break-word;
+    word-break: break-all; /* Ensures long text fits */
+    text-align: center;
+    max-width: 100%; /* Keep inside the container */
+}
+
+
+
+.ca-value:hover {
+    color: #ff4500; /* Change to orange when hovered */
 }
 
 /* Mobile Responsiveness */
@@ -215,6 +262,17 @@ body {
     position: absolute; /* Change from fixed to absolute */
     font-size: 40px;
     color: red;
+    pointer-events: none;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    z-index: 200; /* Make sure it's above other elements */
+}
+
+.gcheck {
+    position: absolute; /* Change from fixed to absolute */
+    font-size: 40px;
+    color: green;
     pointer-events: none;
     opacity: 1;
     transform: scale(1);

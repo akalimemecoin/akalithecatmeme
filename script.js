@@ -41,7 +41,7 @@ function scrollToTop(event) {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 }
 
-//serce
+//serce GIF
 
 function showHeart() {
     let heart = document.getElementById("heartGif");
@@ -81,5 +81,45 @@ window.createFlyingHeart = function(event) {
     // Remove heart after animation
     setTimeout(() => {
         heart.remove();
+    }, 800);
+};
+
+//CONTACT ADDRESS COPYABLE 
+
+function copyToClipboard() {
+    const text = document.getElementById("contract-address").innerText;
+    navigator.clipboard.writeText(text)
+}
+
+//COPIED ADDY CONFIRMATION
+
+window.createFlyingGCheck = function(event) { 
+    const imageContainer = event.currentTarget;
+    const gcheck = document.createElement("span");
+    gcheck.innerHTML = "✅";
+    gcheck.classList.add("gcheck");
+
+    // Get image position
+    const rect = imageContainer.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // Set initial position
+    gcheck.style.left = centerX + "px";
+    gcheck.style.top = centerY + "px";
+    gcheck.style.position = "absolute";
+    gcheck.style.transform = "translate(-50%, -50%)";
+
+    document.body.appendChild(gcheck);
+
+    // Animate the heart
+    setTimeout(() => {
+        gcheck.style.opacity = "0";
+        gcheck.style.transform = "translate(-50%, -100px) scale(1.5)";
+    }, 50);
+
+    // Remove heart after animation
+    setTimeout(() => {
+        gcheck.remove();
     }, 800);
 };
