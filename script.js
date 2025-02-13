@@ -101,7 +101,7 @@ window.createFlyingGCheck = function(event) {
 
     // Get image position
     const rect = imageContainer.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
+    const centerX = rect.left + rect.width -rect.width/4*3;
     const centerY = rect.top + rect.height / 2;
 
     // Set initial position
