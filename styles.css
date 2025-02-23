@@ -1,16 +1,22 @@
-body {
-    display: flex; /*dziwne coś*/
+html, body {
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('background.png');
     background-size: cover;
     overflow-y: scroll; /* Always show a vertical scrollbar */
     padding-top: 50px; /* Ensures body content doesn't hide under navbar */
-    /* cursor: url('akali5.cur') 16 16, auto; OPCJONALNIE*/
-    cursor: green; 
+    cursor: green;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* PASEK STAŁY U GÓRY*/
@@ -278,70 +284,95 @@ h3 {
 }
 
 /* FOOTER CAŁY */
-
+/* FOOTER CAŁY */
 .footer-container {
-    /* padding: 2rem 0 4rem 0; */
-    position: relative;
+    background-color: red;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     z-index: 10;
-    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
 }
 
 .footer {
     width: 100%;
-    height: 20vh;
-    background-color: red;
-    color: white;
+    max-width: 1200px;
+    position: relative; /* Enable absolute positioning for children */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center .guziki horizontally */
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .guziki {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    gap: 30px; /* Keeps images spaced out */
 }
 
 .guziki a {
-    flex: 1;
-    height: 100%;
+    flex: 0 1 auto;
+    height: 80px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .guziki a img {
-    width: 100%;
+    width: auto;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-/* Ensure the footer stays at the bottom */
+/* Position the text absolutely so it stays to the right */
+.copyr {
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
-    .footer {
-        height: 15vh;
+    .footer-container {
+        padding: 0.5rem 0;
     }
 }
 
 @media (max-width: 768px) {
     .footer {
-        height: 12vh;
+        flex-direction: column;
     }
+
     .guziki {
-        flex-direction: row;
+        gap: 25px; /* Adjusted gap for smaller screens */
+    }
+
+    .guziki a {
+        height: 60px;
+    }
+
+    .copyr {
+        display: none; /* Hide copyright message on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .footer {
-        height: 10vh;
-    }
     .guziki {
-        flex-direction: row;
+        gap: 20px; /* Adjusted gap for mobile screens */
+    }
+
+    .guziki a {
+        height: 50px;
+    }
+
+    .copyr {
+        display: none; /* Ensure copyright is removed on mobile */
     }
 }
-
-
