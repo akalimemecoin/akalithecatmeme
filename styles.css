@@ -430,12 +430,90 @@ h3 {
     }
 }
 
+/*HEADER ON PHONES*/
 @media (max-width: 500px) {
+    .topnav {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Keep elements aligned to the left */
+        flex-direction: row; /* Ensure row layout */
+        width: 100%;
+        padding: 10px;
+        gap: 10px; /* Ensure a 10px space between elements */
+    }
+
+    .akali3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Align image to the left */
+        flex: 0 1 auto; /* Prevents unnecessary stretching */
+    }
+
+    .akali3 img {
+        max-width: 50px; /* Adjusted image size */
+        height: auto;
+        display: block;
+    }
+
+    .guzik {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 auto; /* Ensures it only takes the necessary space */
+        width: 110px; /* Keep button size balanced */
+        height: 40px;
+        font-size: 12px;
+        margin-left: 10px; /* Guarantees a 10px space between the image and button */
+        position: static; /* Ensure it follows normal flow */
+    }
+
+    .zdjecie1 {
+        display: none;
+    }
+    #heartGif{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER ON PHONES*/
+@media (max-width: 500px) {
+    .footer-container {
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
     .guziki {
-        gap: 20px; /* Adjusted gap for mobile screens */
+        gap: 10px;
     }
 
     .guziki a {
-        height: 50px;
+        height: 40px; /* Smaller buttons */
+    }
+
+    .guziki a img {
+        height: 40px;
+    }
+
+    .copyr {
+        font-size: 10px; /* Smaller text */
+        right: 5px;
     }
 }
