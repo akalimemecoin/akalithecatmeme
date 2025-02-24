@@ -24,61 +24,132 @@ main {
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 .guzik {
-    display: flex;
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    margin-right: 1250px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;            /* Remove it from the normal flex flow */
+    left: 200px;        /* 100px from the .akali3 img width + 20px gap */
+    top: 50%;                      /* Vertically center within the navbar */
+    transform: translateY(-50%);   /* Correct vertical centering */
     width: 160px;
     height: 80px;
     text-align: center;
     background-color: #ffcc00;
-    border-radius: 25px; /* Ensures rounded borders */
-    border: 3px solid black; /* Fixes border (previously incorrect) */
-    cursor: pointer; /* Ensure it looks clickable */
+    border-radius: 25px;
+    border: 3px solid black;
+    cursor: pointer;
     font-size: 20px;
-    font-family: 'Gloria Hallelujah', cursive; /* Ensures the correct font */
-    outline: none; /* Removes outline on focus */
+    font-family: 'Gloria Hallelujah', cursive;
+    outline: none;
 }
+
+
 
 .guzik:hover {
-    background-color: lightgreen; /* Slightly darker yellow */
+    background-color: lightgreen; /* Change on hover */
     color: black;
 }
-
 
 .topnav {
     position: fixed; /* Sticks to the top */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: RGB(40, 150, 135);
-    z-index: 100; /* Ensures it stays above other content */
+    background-color: rgb(40, 150, 135);
+    z-index: 100; /* Stays above other content */
     display: flex;
     justify-content: space-between; /* Pushes left and right elements apart */
     align-items: center; /* Centers elements vertically */
     padding: 10px 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 .akali3 img {
     height: 80px; /* Adjust size as needed */
     width: 100px;
-    border-radius: 5px; /* Optional: adds rounded corners */
+    border-radius: 5px; /* Rounded corners */
     cursor: pointer;
-    cursor: url('heart.cur') 16 16, auto; /* 16x16 is the "hotspot" position for the cursor */
+    cursor: url('heart.cur') 16 16, auto; /* Custom cursor with hotspot */
 }
 
 .zdjecie img {
-    justify-content: center; /*watch these 2 lines AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
-    display: flex;
+    display: block; /* Remove flex properties (not applicable for images) */
     height: 75px; /* Adjust size as needed */
     width: auto;
-    border-radius: 5px; /* Optional: adds rounded corners */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 auto; /* Center image if needed */
 }
 
 .nav-right {
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
 }
+
+.topnav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 800px) {
+    .guzik {
+        width: 120px;
+        height: 60px;
+        font-size: 16px;
+        margin: 5px;
+        left:100px
+    }
+    .znikajacy {
+        display: none;
+    }
+    
+    .akali3 img {
+        height: 60px;
+        width: auto;
+    }
+    
+    .zdjecie img {
+        height: 60px;
+    }
+    
+    .topnav a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) { /*does not change which is weird -> maybe its larger or smaller idk*/
+    .guzik {
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+        margin: 5px;
+        left: 40px;
+    }
+    .znikajacy {
+        display: none;
+    }
+    
+    .akali3 img {
+        height: 50px;
+    }
+    
+    .zdjecie img {
+        height: 50px;
+    }
+    
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
 
 .topnav a{
     color: #ffffff;
@@ -286,7 +357,7 @@ h3 {
 /* FOOTER CAŁY */
 /* FOOTER CAŁY */
 .footer-container {
-    background-color: red;
+    background-color: RGB(40, 150, 135); /*ciemno-zielony*/
     width: 100%;
     position: fixed;
     bottom: 0;

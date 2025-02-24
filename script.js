@@ -54,7 +54,11 @@ function hideHeart() {
 
 //serce on click
 window.createFlyingHeart = function(event) { 
-    const imageContainer = event.currentTarget;
+    event.preventDefault(); // Prevents any unwanted default behavior (especially for <a>)
+
+    const imageContainer = event.target.closest('.akali3'); // Ensure it gets the right element
+    if (!imageContainer) return; // Stop if there's no valid element
+
     const heart = document.createElement("span");
     heart.innerHTML = "❤️";
     heart.classList.add("heart");
@@ -65,11 +69,11 @@ window.createFlyingHeart = function(event) {
     const centerY = rect.top + rect.height / 2;
 
     // Set initial position
-    heart.style.left = centerX + "px";
-    heart.style.top = centerY + "px";
+    heart.style.left = `${centerX}px`;
+    heart.style.top = `${centerY}px`;
     heart.style.position = "absolute";
     heart.style.transform = "translate(-50%, -50%)";
-
+    
     document.body.appendChild(heart);
 
     // Animate the heart
@@ -83,6 +87,7 @@ window.createFlyingHeart = function(event) {
         heart.remove();
     }, 800);
 };
+
 
 //CONTACT ADDRESS COPYABLE 
 
