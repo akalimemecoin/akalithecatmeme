@@ -123,7 +123,7 @@ main {
     }
 }
 
-@media (max-width: 480px) { /*does not change which is weird -> maybe its larger or smaller idk*/
+@media (max-width: 500px) { /*does not change which is weird -> maybe its larger or smaller idk*/
     .guzik {
         width: 100px;
         height: 50px;
@@ -428,22 +428,14 @@ h3 {
     .guziki a {
         height: 60px;
     }
-
-    .copyr {
-        display: none; /* Hide copyright message on smaller screens */
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .guziki {
         gap: 20px; /* Adjusted gap for mobile screens */
     }
 
     .guziki a {
         height: 50px;
-    }
-
-    .copyr {
-        display: none; /* Ensure copyright is removed on mobile */
     }
 }

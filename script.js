@@ -128,3 +128,4 @@ function createFlyingGCheck(event) {
         gcheck.remove();
     }, 800);
 };
+
