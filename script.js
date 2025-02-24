@@ -53,7 +53,7 @@ function hideHeart() {
 }
 
 //serce on click
-window.createFlyingHeart = function(event) { 
+function createFlyingHeart(event) { 
     event.preventDefault(); // Prevents any unwanted default behavior (especially for <a>)
 
     const imageContainer = event.target.closest('.akali3'); // Ensure it gets the right element
@@ -98,7 +98,7 @@ function copyToClipboard() {
 
 //COPIED ADDY CONFIRMATION
 
-window.createFlyingGCheck = function(event) { 
+function createFlyingGCheck(event) { 
     const imageContainer = event.currentTarget;
     const gcheck = document.createElement("span");
     gcheck.innerHTML = "✅";
