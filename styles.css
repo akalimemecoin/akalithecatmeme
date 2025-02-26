@@ -442,36 +442,25 @@ h3 {
         gap: 10px; /* Ensure a 10px space between elements */
     }
 
-    .akali3 {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Align image to the left */
-        flex: 0 1 auto; /* Prevents unnecessary stretching */
-    }
-
     .akali3 img {
-        max-width: 50px; /* Adjusted image size */
-        height: auto;
-        display: block;
+        width: 100px; /* Adjusted image size */
+        height: 100px;
     }
 
     .guzik {
-        display: flex;
         justify-content: center;
         align-items: center;
-        flex: 0 1 auto; /* Ensures it only takes the necessary space */
-        width: 110px; /* Keep button size balanced */
-        height: 40px;
-        font-size: 12px;
-        margin-left: 10px; /* Guarantees a 10px space between the image and button */
+        width: 130px; /* Keep button size balanced */
+        height: 70px;
         position: static; /* Ensure it follows normal flow */
+        margin-top: 70px;
     }
 
     .zdjecie1 {
         display: none;
     }
     #heartGif{
-        display: none;
+        display: none !important;
     }
 }
 
