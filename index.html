@@ -1,82 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akali the cat</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="akali.ico"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akali the cat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="akali.ico">
 </head>
 <body>
-    <div class="topnav">      
-        <a class="akali3" href="#cat" onmouseover="showHeart(event)" onmouseout="hideHeart()" onclick="createFlyingHeart(event)">
-            <img class="akali3" src="akali3.png" alt="Akali Logo">
+  <!-- Top Navigation (from website 2) -->
+  <div class="topnav">      
+      <a class="akali3" href="#cat" onmouseover="showHeart(event)" onmouseout="hideHeart(event)" onclick="createFlyingHeart(event)">
+          <img class="akali3" src="akali3.png" alt="Akali Logo">
+      </a>
+      <img id="heartGif" src="serce.gif" alt="Heart Animation" style="position: absolute; display: none">
+      <button class="guzik" onclick="window.open('https://www.youtube.com')">BUY $AKALI</button>  
+      <div class="nav-right">
+          <a class="zdjecie znikajacy" href="#home" onclick="scrollToTop(event)">
+              <img src="home_pic.webp" alt="Dooooomek">
+          </a>
+          <a class="zdjecie zdjecie1" href="https://x.com/home" target="_blank">
+              <img src="x.avif" alt="x">
+          </a>
+          <a class="zdjecie zdjecie1" href="https://www.instagram.com/akalinajpiekniejszakicia/" target="_blank">
+              <img src="insta.webp" alt="insta"> 
+          </a>
+          <a class="zdjecie zdjecie1" href="https://web.telegram.org/a/" target="_blank">
+              <img src="telegram.webp" alt="telegram">
+          </a>
+      </div>
+  </div>
+  <!-- Hero Section (from website 1) -->
+  <div class="container" id="first-page">
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-image">
+          <p>😺 Hi! My name is <b>Akali</b></p>
+          <p>🐱 I am a real cat</p>
+          <p>🐱 I am new to the memecoin community</p>
+          <p>💻 I was created by a single developer.</p>
+          <h3>About the Developer</h3>
+          <p>👨‍💻 I'm a 20-year-old IT student from Poland.</p>
+          <p>🚀 My goal? To beat <b>$DOGE</b> or hit <b>at least 1mil$ MC</b></p>
+          <p>🐾 I <b>believe</b> cats are superior to dogs! 😼</p>
+          <p>🌟 This is my long-term project.</p>
+          <p>🛠 I started making this website on <b>Feb 1, 2025</b>.</p>
+          <p>🙏 I'd be <b>very grateful</b> for everyone who supports this journey! 🐈</p>
+          
+          <!-- Contract Address Section (only once) -->
+          <div class="contract-address">
+              <span class="ca-label">CA:</span>
+              <span class="ca-value" id="contract-address" onclick="copyToClipboard();createFlyingGCheck(event)">
+                FxGPLSVD75jur2XoUTiW9b8MdxMQfJYR5Kv8QkpvsqtF
+              </span>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <!-- Circular hero image -->
+          <img src="akali.png" alt="Akali the Cat" class="hero-image">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Gallery/Main Content (from website 1) -->
+  <div class="container" id="second-page">
+    <main>
+      <h2 class="nature">Akali in Nature</h2>
+      <section class="gallery">
+        <img src="las.jpg" alt="Akali in the grass">
+        <img src="las2.jpg" alt="Akali in a forest">
+        <img src="las3.jpg" alt="Akali on an autumn walk">
+        <img src="las4.jpg" alt="Akali near a tree">
+        <img src="las5.jpg" alt="Akali in the garden">
+      </section>
+      <h2 class="playful">Playful Akali</h2>
+      <section class="gallery playful">
+        <img src="playful.jpg" alt="Akali in the grass">
+        <img src="playful2.jpg" alt="Akali in a forest"> 
+        <img src="playful3.jpg" alt="Akali on an autumn walk">
+        <img src="playful4.jpg" alt="Akali near a tree">
+      </section>
+      <h2 class="movie">Akali movie star</h2>
+      <section class="gallery">
+          <video src="gif.mp4" controls></video>
+          <video src="gif2.mp4" controls></video>
+          <video src="gif3.mp4" controls></video>
+      </section>
+      <h2 class="chilling">Akali chilling</h2>
+      <section class="gallery">
+        <img src="chilling.jpg" alt="Akali in the grass">
+        <img src="chilling2.jpg" alt="Akali in a forest">
+        <img src="chilling3.jpg" alt="Akali on an autumn walk">
+        <img src="chilling4.jpg" alt="Akali near a tree">
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer (from website 2) -->
+  <div class="footer-container">
+    <div class="footer">
+      <div class="guziki">
+        <a class="zdjecie" href="https://x.com/home" target="_blank">
+          <img src="x.avif" alt="x">
         </a>
-        <img id="heartGif" src="serce.gif" alt="Heart Animation" style="position: absolute; display: none">
-        <button class="guzik" onclick="window.open('https://www.youtube.com')">BUY $AKALI</button>  
-        <div class="nav-right">
-            <a class="zdjecie znikajacy" href="#home" onclick="scrollToTop(event)">
-                <img src="home_pic.webp" alt="Dooooomek">
-            </a>
-            <a class="zdjecie zdjecie1" href="https://x.com/home" target="_blank">
-                <img src="x.avif" alt="x">
-            </a>
-            <a class="zdjecie zdjecie1" href="https://www.instagram.com/akalinajpiekniejszakicia/" target="_blank">
-                <img src="insta.webp" alt="insta"> 
-            </a>
-            <a class="zdjecie zdjecie1" href="https://web.telegram.org/a/" target="_blank">
-                <img src="telegram.webp" alt="telegram">
-            </a>
-        </div>
+        <a class="zdjecie" href="https://www.instagram.com/akalinajpiekniejszakicia/" target="_blank">
+          <img src="insta.webp" alt="insta"> 
+        </a>
+        <a class="zdjecie" href="https://web.telegram.org/a/" target="_blank">
+          <img src="telegram.webp" alt="telegram">
+        </a>
+        <p class="copyr">© 2025 akali</p>
+      </div>
     </div>
-    <div class="image-container">
-        <img src="akali.png" alt="Cat">
-    </div>
-    <div class="text-container">
-        <p>😺 Hi! My name is <b>Akali</b></p>
-        <p>🐱 I am a real cat</p>
-        <p>🐱 I am new to the memecoin community</p>
-        <p>💻 I was created by a single developer.</p>
-        <h3>About the Developer</h3>
-        <p>👨‍💻 I'm a 20-year-old IT student from Poland.</p>
-        <p>🚀 My goal? To beat <b>$DOGE</b> or hit <b>at least 1mil$ MC</b></p>
-        <p>🐾 I <b>believe</b> cats are superior to dogs! 😼</p>
-        <p>🌟 This is my long-term project.</p>
-        <p>🛠 I started making this website on <b>Feb 1, 2025</b>.</p>
-        <p>🙏 I'd be <b>very grateful</b> for everyone who supports this journey! 🐈</p>
-    
-        <!-- Contract Address Section -->
-        <div class="contract-address">
-            <span class="ca-label">CA:</span>
-            <span class="ca-value" id="contract-address" onclick="copyToClipboard();createFlyingGCheck(event)">FxGPLSVD75jur2XoUTiW9b8MdxMQfJYR5Kv8QkpvsqtF</span>
-        </div>
-    </div> 
-    <!--
-    <div class="question_mark">
-        <img src="pytajnik.jpg" alt="?">
-    </div>
-    <div class="video-container">
-        <video id="myVideo" width="500" height="500" muted>
-            <source src="gif.mp4" type="video/mp4">
-        </video> 
-    </div>
-    -->
-    <div class="footer-container">
-        <div class="footer">
-            <div class="guziki">
-                <a class="zdjecie" href="https://x.com/home" target="_blank">
-                    <img src="x.avif" alt="x">
-                </a>
-                <a class="zdjecie" href="https://www.instagram.com/akalinajpiekniejszakicia/" target="_blank">
-                    <img src="insta.webp" alt="insta"> 
-                </a>
-                <a class="zdjecie" href="https://web.telegram.org/a/" target="_blank">
-                    <img src="telegram.webp" alt="telegram">
-                </a>
-                <p class="copyr">© 2025 akali</p>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  </div>
+
+  <!-- Merged Script -->
+  <script src="script.js"></script>
 </body>
 </html>
