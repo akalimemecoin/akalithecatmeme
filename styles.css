@@ -40,22 +40,29 @@
     text-align: center;
   }
   
-  /* HERO AND MAIN CONTENT (from website 1) */
+  /* RAMKAAAAAAAAAAAAAAAAAAAAAAA  tekstowa*/ 
   #first-page {
     margin: auto;
   }
   .hero-section {
-    background: rgba(255, 255, 255, 0.7);
+    background:  rgba(255, 221, 153, 0.9);/* rgba(255, 255, 255, 0.7);*/
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
   }
+
+  h3 {
+    margin-top: 15px;
+    color: #d26f00; /* Playful orange */
+  }
+
   .hero-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    font-size: larger;
   }
   .hero-image-wrapper {
     flex: 0 0 auto;
@@ -229,8 +236,7 @@
     font-size: clamp(12px, 4vw, 24px);
     font-weight: bold;
     display: block;
-    margin-top: 5px;
-    color: #555;
+    color: red;
     white-space: normal;
     overflow-wrap: break-word;
     word-break: break-all;
@@ -333,6 +339,7 @@
     .hero-content {
       flex-direction: column;
       align-items: center;
+      font-size: larger;
     }
     .gallery img, 
     .gallery video {
@@ -476,4 +483,13 @@
         font-size: 10px; /* Smaller text */
         right: 5px;
     }
+}
+
+.arrow{
+  position: absolute;
+  top: 180px;   /* Move it down from the top of the page so it's below the nav */
+  left: 50px;  /* Move it horizontally to aim at your nav’s desired spot */
+  z-index: 5;  /* Adjust if you need the arrow behind/above something else */
+  transform: scale(1.5);   /* Doubles its size */
+  transform-origin: center;
 }
