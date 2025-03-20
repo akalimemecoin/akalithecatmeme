@@ -16,7 +16,7 @@
       <img id="heartGif" src="serce.gif" alt="Heart Animation" style="position: absolute; display: none">
       <button class="guzik" onclick="window.open('https://www.youtube.com')">BUY $AKALI</button>  
       <div class="nav-right">
-          <a class="zdjecie znikajacy" href="#home" onclick="scrollToTop(event)">
+          <a class="zdjecie znikajacy" onclick="scrollToTop(event)">
               <img src="home_pic.webp" alt="Dooooomek">
           </a>
           <a class="zdjecie zdjecie1" href="https://x.com/home" target="_blank">
@@ -30,11 +30,15 @@
           </a>
       </div>
   </div>
-  <div class="arrow">
-    <img src="strzalka.png">
-  </div>
+  <section class="SekcjArrow">
+    <div class="arrow">
+      <img src="strzalka.png">
+    </div>
+  </section>  
   <!-- Hero Section (from website 1) -->
   <div class="container" id="first-page">
+    <!-- Heart Decorations -->
+
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-image">
@@ -49,7 +53,7 @@
           <p>🌟 This is my long-term project.</p>
           <p>🛠 I started making this website on <b>Feb 1, 2025</b>.</p>
           <p>🙏 I'd be <b>very grateful</b> for everyone who supports this journey! 🐈</p>
-          
+
           <!-- Contract Address Section (only once) -->
           <div class="contract-address">
               <span class="ca-label">CA:</span>
@@ -64,10 +68,13 @@
         </div>
       </div>
     </section>
-  </div>
+</div>
+
 
   <!-- Gallery/Main Content (from website 1) -->
-  <div class="container" id="second-page">
+  <div class="container2" id="second-page">
+    <div class="zolteserce zolteserceL">❤️</div>
+    <div class="zolteserce zolteserceP">❤️</div>
     <main>
       <h2 class="nature">Akali in Nature</h2>
       <section class="gallery">
@@ -81,8 +88,8 @@
       <section class="gallery playful">
         <img src="playful.jpg" alt="Akali in the grass">
         <img src="playful2.jpg" alt="Akali in a forest"> 
-        <img src="playful3.jpg" alt="Akali on an autumn walk">
-        <img src="playful4.jpg" alt="Akali near a tree">
+        <img src="playful3.jpg" alt="Akali on an autumn walk" class="fix-top">
+        <img src="akali_biznes.jpg" alt="Akali near a tree" class="fix-top">
       </section>
       <h2 class="movie">Akali movie star</h2>
       <section class="gallery">

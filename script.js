@@ -1,6 +1,3 @@
-// Adjust src paths by prepending "media/" to each image and video element
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
     // Select all elements whose source or href might need adjusting
     const elements = document.querySelectorAll(
@@ -57,15 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       questionMark.classList.add("hidden");
     });
   }
-  
-  // Smooth scroll to top function
-  function scrollToTop(event) {
-    event.preventDefault();
-    const scrollContainer = document.scrollingElement || document.documentElement;
-    scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  
-
   
   // Functions for showing and hiding the heart GIF
   function showHeart(event) {
@@ -135,6 +123,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 800);
   }
   
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".zdjecie.znikajacy").addEventListener("click", scrollToTop);
+  // Smooth scroll to top function
+  window.scrollToTop = function(event) {
+    if (event) event.preventDefault();
+    // Ensure both documentElement and body are targeted for different browsers
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    document.body.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+
+/* expanding pictures */
+
+const images = document.querySelectorAll(".gallery img");
+    
+    // Create modal elements
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-img" src="" alt="Full Size Image" style="max-width: 90vw; max-height: 90vh; user-select: none; outline: none;">
+        </div>
+    `;
+    document.body.appendChild(modal);
+    
+    const modalImg = modal.querySelector(".modal-img");
+    const closeBtn = modal.querySelector(".close");
+    
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            modal.style.display = "flex";
+            modalImg.src = this.src;
+            modalImg.style.filter = "none"; // Ensure no blue overlay
+        });
+    });
+    
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+    
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+    
+    // Prevent blue highlight when clicking repeatedly
+    modalImg.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+    });
+
+    /* nie kopiuj */
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("contextmenu", event => event.preventDefault());
   });
