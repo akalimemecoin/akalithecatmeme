@@ -1,13 +1,10 @@
-/* BASIC RESET */
-* 
-  
-  {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  /* GLOBAL STYLES – merged */
   html, body {
     height: 100%;
     display: flex;
@@ -16,7 +13,7 @@
     padding: 0;
     font-family: Arial, sans-serif;
     background: #d7f3fd; /* fallback background color */
-    background-image: url('media/background.png');
+    background-image: url('media/bg2.png');
     background-size: cover;
     color: #333;
     font-size: clamp(12px, 1.5vw, 16px);
@@ -490,62 +487,76 @@
 /* THE FUN BEGINS HERE */
 
 .SekcjArrow {
-  position: relative;  /* The arrow will now be positioned relative to this */
+  position: relative;
 }
 
-.arrow img {
-  top: -20px;
+.arrow {
+  background-image: url('media/arrow1.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
+  top: -20px;
   left: 50px;
-  transform: scale(1.5);
+  width: 100px; /* Set an explicit size */
+  height: 100px;
   transform-origin: center;
+  transform: scale(1.5) rotate(180deg); /* Rotate 180° along with scaling DO ARROW1*/ 
+  -webkit-transform: scale(1.5) rotate(180deg); /* Vendor prefix for compatibility DO ARROW1 */ 
+  /* transform: scale(1.5) rotate(270deg); /*strzalka 2 i 3*/
+  /* -webkit-transform: scale(1.5) rotate(270deg); /* strzalka 2 i 3*/
 }
 
 @media (max-width: 1500px) {
-  .arrow img{
+  .arrow {
     top: -70px;
     transform: scale(0.8);
   }
 }
 
 @media (max-width: 900px) {
-  .arrow img{
+  .arrow {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .arrow img{
-    display: block; /* Ensure it's visible */
-    position: fixed; /* Make it independent of .SekcjArrow */
-    top: 50px; /* Stick to the very top */
-    left: 30px; /* Stick to the very left */
-    z-index: 9999; /* Ensure it stays on top */
-    transform: scale(1); /* Reset scaling if necessary */
+  .arrow {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 30px;
+    z-index: 9999;
+    transform: scale(1);
     rotate: 90deg;
   }
 }
+
 
 .container2 {
   position: relative; /* This makes child elements with 'absolute' positioning relative to it */
 }
 
-.zolteserce{
+.zolteserce {
   position: absolute;
-  font-size: 24px; /* Adjust size as needed */
-  color: red;
-  z-index: 100000; /* Ensures it's above other elements */
+  width: 50px;  /* Match the previous font size */
+  height: 50px;
+  background-image: url('media/zolte_serce.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1; /* Ensures it's above other elements */
 }
 
-.zolteserceL{
+.zolteserceL {
   top: 10px;
   left: 10px;
 }
 
-.zolteserceP{
+.zolteserceP {
   top: 10px;
   right: 10px;
 }
+
 
 /*css code of photos? */
 .modal {
@@ -587,4 +598,20 @@
   height: 100%; /* Ensure the image takes full height */
   width: 100%; /* Ensure it fills the container */
   display: block;
+}
+
+/* tekst 1 akali */
+.galeria-text {
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-size: 75px;
+}
+
+.galeria-text2{
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-size: 25px;
+}
+
+.expandable-highlight {
+  font-style: italic; /* Makes it cursive-like */
+  color: rgb(15, 34, 177);     /* Change to any color you prefer */
 }

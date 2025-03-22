@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="akali.ico">
 </head>
 <body>
-  <!-- Top Navigation (from website 2) -->
+  <!-- pasek u góry -->
   <div class="topnav">      
       <a class="akali3" href="#cat" onmouseover="showHeart(event)" onmouseout="hideHeart(event)" onclick="createFlyingHeart(event)">
           <img class="akali3" src="akali3.png" alt="Akali Logo">
@@ -31,14 +31,10 @@
       </div>
   </div>
   <section class="SekcjArrow">
-    <div class="arrow">
-      <img src="strzalka.png">
-    </div>
-  </section>  
-  <!-- Hero Section (from website 1) -->
+    <div class="arrow"></div> 
+  </section>
+  <!-- żółta ramka -->
   <div class="container" id="first-page">
-    <!-- Heart Decorations -->
-
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-image">
@@ -54,7 +50,7 @@
           <p>🛠 I started making this website on <b>Feb 1, 2025</b>.</p>
           <p>🙏 I'd be <b>very grateful</b> for everyone who supports this journey! 🐈</p>
 
-          <!-- Contract Address Section (only once) -->
+          <!-- Contract Address Section -->
           <div class="contract-address">
               <span class="ca-label">CA:</span>
               <span class="ca-value" id="contract-address" onclick="copyToClipboard();createFlyingGCheck(event)">
@@ -63,7 +59,7 @@
           </div>
         </div>
         <div class="hero-image-wrapper">
-          <!-- Circular hero image -->
+          <!-- Kotek w kółku -->
           <img src="akali.png" alt="Akali the Cat" class="hero-image">
         </div>
       </div>
@@ -71,11 +67,13 @@
 </div>
 
 
-  <!-- Gallery/Main Content (from website 1) -->
+  <!-- Białe pudełko -->
   <div class="container2" id="second-page">
-    <div class="zolteserce zolteserceL">❤️</div>
-    <div class="zolteserce zolteserceP">❤️</div>
+    <div class="zolteserce zolteserceL"></div>
+    <div class="zolteserce zolteserceP"></div>
     <main>
+      <h1 class="galeria-text">Akali's gallery</h1>
+      <h1 class="galeria-text2">All photos are <span class="expandable-highlight">expandable!</span></h1>
       <h2 class="nature">Akali in Nature</h2>
       <section class="gallery">
         <img src="las.jpg" alt="Akali in the grass">
@@ -107,7 +105,7 @@
     </main>
   </div>
 
-  <!-- Footer (from website 2) -->
+  <!-- Footer -->
   <div class="footer-container">
     <div class="footer">
       <div class="guziki">
@@ -124,8 +122,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Merged Script -->
   <script src="script.js"></script>
 </body>
 </html>
