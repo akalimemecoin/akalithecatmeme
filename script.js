@@ -177,3 +177,28 @@ const images = document.querySelectorAll(".gallery img");
     document.querySelectorAll("img").forEach(img => {
       img.addEventListener("contextmenu", event => event.preventDefault());
   });
+
+  /*timer */
+  // Set your official launch date (adjust as needed)
+var launchDate = new Date("2025-06-30T00:00:00").getTime();
+
+// Update the countdown every 1 second
+var timerInterval = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = launchDate - now;
+
+  // Calculate time units
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the timer element
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+  // If the countdown is finished, display a message
+  if (distance < 0) {
+    clearInterval(timerInterval);
+    document.getElementById("timer").innerHTML = "LAUNCHED";
+  }
+}, 1000);

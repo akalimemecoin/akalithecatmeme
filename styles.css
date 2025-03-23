@@ -544,7 +544,6 @@
   background-image: url('media/zolte_serce.png');
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 1; /* Ensures it's above other elements */
 }
 
 .zolteserceL {
@@ -615,3 +614,79 @@
   font-style: italic; /* Makes it cursive-like */
   color: rgb(15, 34, 177);     /* Change to any color you prefer */
 }
+
+/* końcówka przed footerem */
+
+.finisher {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  margin-right: 1rem;  /* Space between the left column and the akali-folder */
+}
+
+.small-text {
+  background-color: #f5e28a;
+  border-radius: 25px;
+  padding: 10px 20px;
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px; /* This creates a gap so the green heart is 10px below the small text */
+}
+
+.green-heart {
+  max-width: 80px; /* Adjust as needed */
+}
+
+.akali-folder {
+  max-width: 160px; /* Adjust as needed */
+}
+
+
+/* launch timer */
+#launch-timer {
+  background-color: yellow;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.launch-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+#launch-timer #timer {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+#launch-timer .more-info {
+  font-size: 1.4em; /* Slightly larger than before */
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+#launch-timer .more-info:hover {
+  color: darkblue;
+}
+
