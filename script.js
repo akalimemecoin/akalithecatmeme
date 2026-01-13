@@ -179,7 +179,7 @@ const images = document.querySelectorAll(".gallery img");
   });
 
   /*timer */
-  // Set your official launch date (adjust as needed)
+  // Set your official launchh date (adjust as needed)
 var launchDate = new Date("2026-06-30T00:00:00").getTime();
 
 // Update the countdown every 1 second
