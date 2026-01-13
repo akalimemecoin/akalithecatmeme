@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   // --- Website 2 script functionality ---
   
-  // If an element inside .image-container exists, scale it on page load
+  // If an element inside .image-container exists, scale it on page loadd
   window.addEventListener('load', () => {
     const catImage = document.querySelector('.hero-image-wrapper');
     if (catImage) {
